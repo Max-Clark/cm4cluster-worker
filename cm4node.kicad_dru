@@ -1,0 +1,11 @@
+(version 1)
+(rule ETH_ZONE
+   # pour clearance for ethernet
+   (constraint clearance (min 1.5mm))
+   (condition "A.NetClass == 'Ethernet_100' && B.Type == 'Zone' && B.NetName == '+5V' && A.Layer == 'F.Cu'"))
+
+
+(rule PCIe_ZONE
+   # pour clearance for ethernet
+   (constraint clearance (min 1.5mm))
+   (condition "A.NetClass == 'PCIe_90' && B.Type == 'Zone' && B.NetName == 'GND' && A.Layer == 'B.Cu'"))
